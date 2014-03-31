@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>About || Lois Brezinski Artworks</title>
+		<meta author="Samantha Ebanks" content="Lois Brezinski Artworks, Delray Beach Fl" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
+
+		<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+		<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light|Fanwood+Text' rel='stylesheet' type='text/css' />
+
+		<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<img src="images/logo.jpg" alt="logo img" class="logo" />
+				<nav>
+					<a id="touch-menu" class="mobile-menu" href="#"><i class="fa fa-bars fa-2x"></i></a>
+					<ul class="menu">
+						<li><a href="index.html"><i class="fa fa-home"></i>HOME</a></li>
+						<li><a  href="gallery.html"><i class="fa fa-picture-o"></i>GALLERY</a></li>
+						<li  class="current"><a  href="about.html"><i class="fa fa-user"></i>ABOUT</a></li>
+						<li><a  href="contact.html"><i class="fa fa-envelope"></i>CONTACT</a></li>
+					  </ul>
+				  </nav>
+				
+			</header>
+			<div id="content2">
+				<div class="row clearfix">
+					<div id="aboutpics" class="column full">
+						<h1>About Lois</h1>
+						<img src="images/abtbanner.png" alt="pic of coconuts" />
+					</div>
+					<p class="column full">During a vacation to the Cayman Islands in 1990, Lois discovered a love of the tropics and began painting the brilliant colors and light that fascinated her. Soon, her textile business evolved blissfully into a life of painting in Grand Cayman. Several galleries in Grand Cayman represent Lois&rsquo;s work and her business, Cayman Colors, thrives selling reproductions of her art to over 20 major gift shops and hotels. The National Gallery of the Cayman Islands includes Lois&rsquo;s work in their permanent collection and the Ritz Carlton Grand Cayman commissioned five watercolors for their lobby.</p>
+					<img class="divider" src="images/divider.png" />
+					<p class="column full">PI Fine Art of Toronto publishes over twenty of her paintings and these prints can be seen throughout the Caribbean, Europe, and the Bahamian and Trinidad US Embassies, Marriott Hotels, the Atlantis condominium in the Bahamas and recently in Home Goods stores in South Florida. 
+					In 2011, Lois was commissioned to paint an original watercolor of the Breakers Hotel. Over 80 newly renovated rooms at the Breakers feature this painting along with other prints by the artist.
+					<br><br>
+					Lois currently resides in Delray Beach  &ldquo;The Historic Homes of Delray Beach&rdquo; calendars of 2005 and 2006 featured her original watercolors of historic homes which led to a deep respect for the unique architecture of old Florida. She was a  founding member of the Delray Beach Preservation Trust which is dedicated to preserving the architectural integrity of older neighborhoods.
+					<br><br>	
+					The Gallery Store at the historic Colony Hotel is a perfect fit for Lois&rsquo;s tropical art, and Delray Beach watercolors. She has the opportunity to show work of the artists she has known over the years, and to feature her Delray Beach images on gift item. The result is a colorful, bright and playful place to shop.</p>	
+				</div>	
+			</div>
+			<footer>
+				<h3>Copyright 2014 Sam Ebanks</h3>
+				
+			</footer>	
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var touch = $("#touch-menu");
+				var menu = $(".menu");
+
+				$(touch).on("click", function(e){
+					e.preventDefault();
+					menu.slideToggle();
+				});
+
+				$(window).resize(function(){
+					var w = $(window).width();
+					if(w > 767 && menu.is(":hidden")) {
+						menu.removeAttr("style");
+					}
+				});
+			});
+		</script>	
+	</body>	
+</html>

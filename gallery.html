@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Gallery || Lois Brezinski Artworks</title>
+		<meta author="Samantha Ebanks" content="Lois Brezinski Artworks, Delray Beach Fl" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
+
+		<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+		<script src="js/lightGallery.js"></script>
+
+		<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light|Fanwood+Text' rel='stylesheet' type='text/css' />
+
+		<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+
+		<link rel="stylesheet" href="css/lightGallery.css" type="text/css" />
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<img src="images/logo.jpg" alt="logo img" class="logo" />
+				<nav>
+					<a id="touch-menu" class="mobile-menu" href="#"><i class="fa fa-bars fa-2x"></i></a>
+					<ul class="menu">
+						<li><a href="index.html"><i class="fa fa-home"></i>HOME</a></li>
+						<li class="current"><a  href="gallery.html"><i class="fa fa-picture-o"></i>GALLERY</a></li>
+						<li><a  href="about.html"><i class="fa fa-user"></i>ABOUT</a></li>
+						<li><a  href="contact.html"><i class="fa fa-envelope"></i>CONTACT</a></li>
+					  </ul>
+				  </nav>
+				
+			</header>
+			<div id="container">
+				<div class="row clearfix">
+					<div id="pics">
+						<h1>Artwork by Lois</h1>
+						<ul id="lightGallery">
+							<li data-src="images/botanical.png">
+								<img src="images/botanicthumb.png">
+							</li>
+							<li data-src="images/coconuts.png">
+								<img src="images/cocothumb.png">
+							</li>
+							<li data-src="images/cottage.png">
+								<img src="images/cottagethumb.png">
+							</li>
+							<li data-src="images/cove.png">
+								<img src="images/covethumb.png">
+							</li>
+							<li data-src="images/harbour.png">
+								<img src="images/harbourthumb.png">
+							</li>
+							<li data-src="images/island.png">
+								<img src="images/islandthumb.png">
+							</li>
+							<li data-src="images/leaves.png">
+								<img src="images/leavesthumb.png">
+							</li>
+							<li data-src="images/palms.png">
+								<img src="images/palmsthumb.png">
+							</li>
+							<li data-src="images/quad.png">
+								<img src="images/quadthumb.png">
+							</li>	
+						</ul>
+					</div>
+				</div>	
+			</div>
+			<footer>
+				<h3>Copyright 2014 Sam Ebanks</h3>
+			</footer>	
+		</div>
+		<script type="text/javascript">
+
+			$(document).ready(function(){
+				$("#lightGallery").lightGallery({
+					mode:'fade',
+					useCSS:true,
+					easing: 'ease',
+					speed:1000,
+					loop:true,
+					auto:false,
+					pause:4000,
+					escKey:true,
+
+					exThumbImage:false,
+					thumbnail:true,
+					caption:false,
+					desc:false,
+					controls:true,
+					hideControlOnEnd:false,
+					mobileSrc:false,
+					mobileSrcMaxWidth:640,
+
+					swipeThreshold:50,
+					rel:false,
+					dynamic:false,
+
+					onOpen:function(){},
+					onSlideBefore:function(){},
+					onSlideAfter:function(){},
+					onSlideNext:function(){},
+					onSlidePrev:function(){},
+					onBeforeClose:function(){},
+					onCloseAfter:function(){}
+				});
+
+				var touch = $("#touch-menu");
+				var menu = $(".menu");
+
+				$(touch).on("click", function(e){
+					e.preventDefault();
+					menu.slideToggle();
+				});
+
+				$(window).resize(function(){
+					var w = $(window).width();
+					if(w > 767 && menu.is(":hidden")) {
+						menu.removeAttr("style");
+					}
+				});
+			});
+		</script>	
+	</body>	
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contact || Lois Brezinski Artworks</title>
+		<meta author="Samantha Ebanks" content="Lois Brezinski Artworks, Delray Beach Fl" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
+
+		<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+		<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light|Fanwood+Text' rel='stylesheet' type='text/css' />
+
+		<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<img src="images/logo.jpg" alt="logo img" class="logo" />
+				<nav>
+					<a id="touch-menu" class="mobile-menu" href="#"><i class="fa fa-bars fa-2x"></i></a>
+					<ul class="menu">
+						<li><a href="index.html"><i class="fa fa-home"></i>HOME</a></li>
+						<li><a  href="gallery.html"><i class="fa fa-picture-o"></i>GALLERY</a></li>
+						<li><a  href="about.html"><i class="fa fa-user"></i>ABOUT</a></li>
+						<li class="current"><a  href="contact.html"><i class="fa fa-envelope"></i>CONTACT</a></li>
+					  </ul>
+				  </nav>
+				
+			</header>
+			<div id="content3">
+				<div class="row clearfix">
+					<h1>Contact Lois</h1>
+					<section id="info">
+						<ul>
+							<li><i class="fa fa-envelope fa-3x"></i><a href="mailto:loisbrezinskiartworks@gmail.com">loisbrezinskiartworks@gmail.com</a></li>
+							<li><i class="fa fa-phone fa-3x"></i>561-400-8869</li>
+							<li><i class="fa fa-globe fa-3x"></i><a href="http://www.loisbrezinskiartworks.com" target="blank_">loisbrezinskiartworks.com</a></li>
+						</ul>	
+					</section>	
+					<form id="contact-form" action="#" method="post">
+						<div>
+							<label>
+								<span>*Name: </span>
+								<input placeholder="John Doe" type="text" tabindex="1" required autofocus>
+							</label>	
+						</div>
+						<div>
+							<label>
+								<span>*Email: </span>
+								<input placeholder="me@home.com" type="email" tabindex="2" required>
+							</label>	
+						</div>	
+						<div>
+							<label>
+								<span>Phone: </span>
+								<input placeholder="416-666-6666" type="tel" tabindex="3">
+							</label>	
+						</div>
+						<div>
+							<label>
+								<span>Questions/Comments: </span>
+								<textarea placeholder="Please enter your message here." type="text" tabindex="3"></textarea>
+							</label>	
+						</div>
+						<div>
+							<button name="submit" type="submit" id="contact-submit">Send Message</button>
+						</div>				
+					</form>	
+				</div>	
+			</div>
+			<footer>
+				<h3>Copyright 2014 Sam Ebanks</h3>
+				
+			</footer>	
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var touch = $("#touch-menu");
+				var menu = $(".menu");
+
+				$(touch).on("click", function(e){
+					e.preventDefault();
+					menu.slideToggle();
+				});
+
+				$(window).resize(function(){
+					var w = $(window).width();
+					if(w > 767 && menu.is(":hidden")) {
+						menu.removeAttr("style");
+					}
+				});
+			});
+		</script>	
+	</body>	
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lois Brezinski Artworks</title>
+		<meta author="Samantha Ebanks" content="Lois Brezinski Artworks, Delray Beach Fl" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
+
+		<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+		<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light|Fanwood+Text' rel='stylesheet' type='text/css' />
+
+		<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<img src="images/logo.jpg" alt="logo img" class="logo" />
+				<nav>
+					<a id="touch-menu" class="mobile-menu" href="#"><i class="fa fa-bars fa-2x"></i></a>
+					<ul class="menu">
+						<li class="current"><a href="index.html"><i class="fa fa-home"></i>HOME</a></li>
+						<li><a  href="gallery.html"><i class="fa fa-picture-o"></i>GALLERY</a></li>
+						<li><a  href="about.html"><i class="fa fa-user"></i>ABOUT</a></li>
+						<li><a  href="contact.html"><i class="fa fa-envelope"></i>CONTACT</a></li>
+					  </ul>
+				  </nav>
+				
+			</header>
+			<div id="content">
+				<div class="row clearfix">
+					<section>
+						<img class="column full" src="images/banner.png" alt="pic of flowers" />
+						<p class="column full"> After graduation from Rhode Island School of Design, Lois opened a textile studio in New Jersey and became one of the leading textile stylist artists   working in the New York industry. A vacation to the Cayman Islands changed her direction. She discovered a love of the tropics, relocated to Grand Cayman and began to paint the colors and light that fascinated her. Her textile business evolved blissfully into a life and love of painting. Lois often says she never imagined her life as a painter but now that she is an established fine artist, she can imagine nothing else.</p> 
+					</section>	
+				</div>
+				<div class="row clearfix">
+					<article class="column third">
+						<a href="gallery.html"><h3>Gallery</h3>
+						<i class="fa fa-picture-o fa-5x"></i></a>
+					</article>
+					<article class="column third">
+						<a href="about.html"><h3>About</h3>
+						<i class="fa fa-user fa-5x"></i></a>
+					</article>
+					<article class="column third">
+						<a href="contact.html"><h3>Contact</h3>
+						<i class="fa fa-envelope fa-5x"></i></a>
+					</article>	
+			</div>
+			<footer>
+				<h3>Copyright 2014 Sam Ebanks</h3>
+
+			</footer>	
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var touch = $("#touch-menu");
+				var menu = $(".menu");
+
+				$(touch).on("click", function(e){
+					e.preventDefault();
+					menu.slideToggle();
+				});
+
+				$(window).resize(function(){
+					var w = $(window).width();
+					if(w > 767 && menu.is(":hidden")) {
+						menu.removeAttr("style");
+					}
+				});
+			});
+		</script>	
+	</body>	
+</html>
